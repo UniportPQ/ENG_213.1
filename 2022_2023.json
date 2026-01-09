@@ -1,36 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[
-    {
+\[
+  {
     "type": "pageInfo",
     "kind": "onjective",
-    "course_title": "Engineering Basic Mechanics",
-    "code": "ENG 202.1",
-    "session": "2019/2020",
+    "course_title": "Engineering Computer Programming",
+    "code": "ENG 213.1",
+    "session": "2022/2023",
     "topics": ["Coordinate Geometry", "Circles", "Parabolas", "Ellipses", "Hyperbolas", "Graphs", "Linear Algebra", "Determinants", "Matrix Dimensions", "Adjoint Matrix", "Matrix Transpose", "Diagonal Matrices", "Matrix Multiplication", "Calculus", "Differentiation", "Matrices", "Bilinear Forms", "Eigenvalues", "Trace", "Integration", "Orthogonal Matrices", "Applications", "Eigenvectors"],
     "time": "120"
   },
@@ -42,48 +16,922 @@
     "type": "heading",
     "heading": "Secttion A"
   },
-
   {
-    "type": "subjective",
-    "name": "Question 1a",
+    "type": "Question",
+    "name": "Question 1",
     "topic": [
-      "Equilibrium of Forces",
-      "Statics"
+      "Fortran Programming",
+      "Computer Science Basics"
     ],
     "Question": {
-      "content": "Determine the magnitude of the tension in each cable supporting the 8m boom AC acted upon by the 6kN force shown in the figure.",
+      "content": "How can Fortran be defined?",
       "type": "subjective"
     },
     "Answer": {
       "type": "string",
-      "content": "9.62 kN"
+      "content": "Fortran is a high-level programming language developed for scientific and engineering applications, known for its strong numerical computation support."
     },
     "Explanation": {
       "type": "string",
-      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Calculating Cable Tension</h4>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 1: Understand the Goal</strong><br>\n    We need to find how tightly the cables (BE and BD) are pulling to keep the boom (AC) from falling down. The boom is being pushed down by a 6kN load at the tip.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 2: Get Coordinates & Dimensions</strong><br>\n    Imagine a 3D grid with the joint A at the center (0,0,0).\n    <ul>\n      <li><strong>Point B (Cable attachment):</strong> 4.6m along the boom. \( B = (4.6, 0, 0) \)</li>\n      <li><strong>Point E (Wall anchor):</strong> It's back at the wall (x=0), up 4.2m, and to the side 4.6m. \( E = (0, 4.2, 4.6) \)</li>\n      <li><strong>Point C (Load):</strong> Total length 8m. \( C = (8, 0, 0) \)</li>\n    </ul>\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 3: Calculate Cable Geometry</strong><br>\n    We need the length of the cable from B to E. We use the 3D distance formula:\n    <br>\n    \( \text{Length} = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2} \)\n    <br>\n    \( L = \sqrt{(0-4.6)^2 + (4.2-0)^2 + (4.6-0)^2} \)\n    \( L = \sqrt{21.16 + 17.64 + 21.16} = \sqrt{59.96} \approx 7.743\,m \)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 4: Use \"Moments\" (The See-Saw Effect)</strong>
-      
-      [Image of moment of force diagram] <
-      br > \n The joint A acts like the pivot of a see - saw.The 6 kN load tries to rotate the boom down(Clockwise).The cables pull it up(Counter - Clockwise).These must balance.\n < br > <br>\n    <strong>The Equation:</strong> \( \sum M_A = 0 \)\n    <br>\n    \( (\text{Upward Pull} \times \text{Distance to A}) = (\text{Downward Load} \times \text{Distance to A}) \)\n    <br><br>\n    <em>Note:</em> Only the vertical part of the tension pulls \"up\". The vertical ratio is height/length = \( 4.2 / 7.743 \).\n    Since there are <strong>two</strong> cables:\n    <br>\n    \( 2 \times (T \times \frac{4.2}{7.743}) \times 4.6m = 6kN \times 8m \)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 5: Solve for Tension (T)</strong><br>\n    <div style='background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin: 8px 0; text-align: center;'>\n      \( T \times 4.99 = 48 \)\n      <br>\n      \( T = \frac{48}{4.99} \approx 9.62\,kN \)\n    </div>\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 12px; border-radius: 6px; border-left: 4px solid var(--cAns); margin-top: 15px;'>\n    <strong>✓ Final Answer:</strong> The tension in each cable is 9.62 kN.\n  </div>\n</div>"
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Definition of Fortran</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Name Origin</strong><br>\n    Fortran stands for <strong>\"Formula Translation\"</strong>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Key Characteristics</strong><br>\n    <ul>\n      <li>It is a <strong>high-level language</strong> (easier for humans to read than machine code).</li>\n      <li>It was specifically designed for <strong>scientific and engineering</strong> calculations.</li>\n      <li>It excels at <strong>array processing</strong> and numerical computations.</li>\n    </ul>\n  </div>\n\n  <div style='background: var(--infoBg); color: var(--infoCl); padding: 10px; border-radius: 6px; margin-top: 10px;'>\n    <strong>ℹ️ Real-World Use:</strong> It is widely used in weather forecasting, computational physics, and aerospace engineering.\n  </div>\n</div>"
     }
   },
   {
-    "type": "subjective",
-    "name": "Question 1b",
+    "type": "Question",
+    "name": "Question 2",
     "topic": [
-      "Equilibrium of Forces",
-      "Statics"
+      "Fortran Programming",
+      "Data Types"
     ],
     "Question": {
-      "content": "Determine the reactions at the ball-and-socket joint A for the boom system shown in the figure.",
+      "content": "What are the types of data used in Fortran?",
       "type": "subjective"
     },
     "Answer": {
       "type": "string",
-      "content": "Ax = 11.43 kN, Ay = -4.43 kN, Az = 0 kN"
+      "content": "Integers, real numbers, complex numbers, logical values, and characters."
     },
     "Explanation": {
       "type": "string",
-      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Calculating Reactions at Joint A</h4>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 1: Understand Reactions</strong><br>\n    Newton's Third Law says \"For every action, there is an equal and opposite reaction.\" The wall at point A pushes back against the boom to keep it from moving. We need to find the force of this push in the X, Y, and Z directions.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 2: Sum of Forces in X (Horizontal)</strong><br>\n    The cables are pulling the boom <em>into</em> the wall (Negative X). The wall must push <em>out</em> (Positive X).\n    <br>\n    \( A_x + \text{Cable Forces}_x = 0 \)\n    <br>\n    \( A_x = 2 \times T \times (\frac{4.6}{7.743}) \)\n    <br>\n    \( A_x = 2 \times 9.62 \times 0.594 \approx 11.43\,kN \)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 3: Sum of Forces in Y (Vertical)</strong><br>\n    We have the cables pulling UP, the Load pushing DOWN, and the Reaction \( A_y \).\n    <br>\n    \( A_y + \text{Cable Upward Force} - \text{Load} = 0 \)\n    <br>\n    We know the total cable upward force is \( 10.43\,kN \) (from the previous calculation).\n    <br>\n    \( A_y + 10.43 - 6 = 0 \)\n    <br>\n    \( A_y + 4.43 = 0 \implies A_y = -4.43\,kN \)\n    <br>\n    <em>(The negative sign means the reaction at A is actually pulling downwards to anchor the boom).</em>\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 4: Sum of Forces in Z (Side-to-Side)</strong><br>\n    Because the two cables are symmetrical (one pulls left, one pulls right with equal force), they cancel each other out sideways.\n    <br>\n    \( A_z = 0\,kN \)\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 12px; border-radius: 6px; border-left: 4px solid var(--cAns); margin-top: 15px;'>\n    <strong>✓ Final Answer:</strong>\n    <ul>\n      <li>\( A_x = 11.43\,kN \)</li>\n      <li>\( A_y = -4.43\,kN \)</li>\n      <li>\( A_z = 0\,kN \)</li>\n    </ul>\n  </div>\n</div>"
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Fortran Data Types</h4>\n  \n  <p>Fortran uses several specific data types to handle different kinds of information:</p>\n\n  <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>\n    <div style='background: rgba(0,0,0,0.05); padding: 8px; border-radius: 5px;'>\n      <strong style='color: var(--strongColor);'>1. Integers:</strong> Whole numbers without decimals (e.g., 10, -5).\n    </div>\n    <div style='background: rgba(0,0,0,0.05); padding: 8px; border-radius: 5px;'>\n      <strong style='color: var(--strongColor);'>2. Real Numbers:</strong> Numbers with decimal points (e.g., 3.14, -0.001).\n    </div>\n    <div style='background: rgba(0,0,0,0.05); padding: 8px; border-radius: 5px;'>\n      <strong style='color: var(--strongColor);'>3. Complex Numbers:</strong> Numbers with a real and imaginary part.\n    </div>\n    <div style='background: rgba(0,0,0,0.05); padding: 8px; border-radius: 5px;'>\n      <strong style='color: var(--strongColor);'>4. Logical:</strong> Boolean values (True or False).\n    </div>\n    <div style='background: rgba(0,0,0,0.05); padding: 8px; border-radius: 5px;'>\n      <strong style='color: var(--strongColor);'>5. Character:</strong> Text strings and individual letters.\n    </div>\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 3",
+    "topic": [
+      "Fortran Programming",
+      "Variables"
+    ],
+    "Question": {
+      "content": "How are default valid integer variables typically declared in Fortran?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "They are declared using the INTEGER keyword (e.g., INTEGER :: myVariable)."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Declaring Integer Variables</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Explicit Declaration</strong><br>\n    The modern and recommended way to declare an integer is using the keyword:\n    <div style='background: #282c34; color: #abb2bf; padding: 10px; border-radius: 4px; font-family: monospace; margin: 5px 0;'>\n      INTEGER :: variableName\n    </div>\n    This tells the computer to reserve space for a whole number.\n  </div>\n\n  <div style='background: var(--warningBg); padding: 10px; border-radius: 6px; border-left: 4px solid var(--orange);'>\n    <strong>⚠️ Note on Implicit Typing:</strong><br>\n    In older Fortran code, variables starting with the letters <strong>I, J, K, L, M, or N</strong> were automatically treated as Integers without explicit declaration. This is called \"Implicit Typing.\"\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 4",
+    "topic": [
+      "Fortran Programming",
+      "Variables"
+    ],
+    "Question": {
+      "content": "How are default valid real variable names typically declared in Fortran?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "They are declared using the REAL keyword (e.g., REAL :: myVariable)."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Declaring Real Variables</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    To store numbers with decimal points (like 3.14159), you use the <strong>REAL</strong> data type.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Syntax:</strong><br>\n    <div style='background: #282c34; color: #abb2bf; padding: 10px; border-radius: 4px; font-family: monospace; margin: 5px 0;'>\n      REAL :: variableName\n    </div>\n  </div>\n  \n  <div style='background: var(--infoBg); color: var(--infoCl); padding: 10px; border-radius: 6px;'>\n    <strong>Implicit Rule:</strong> By default, variables starting with letters <strong>A-H</strong> and <strong>O-Z</strong> are treated as Real numbers if not explicitly declared.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 5",
+    "topic": [
+      "Fortran Programming",
+      "Syntax Rules"
+    ],
+    "Question": {
+      "content": "List four invalid variable names in Fortran and give reasons why they are invalid.",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "1. 777abc (Starts with a number), 2. santana-wg (Contains a hyphen), 3. REAL (Reserved keyword), 4. program (Reserved keyword)"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Variable Naming Rules</h4>\n  \n  <p>Fortran has strict rules for naming variables. Here are common errors:</p>\n\n  <table style='width: 100%; border-collapse: collapse; margin-top: 10px;'>\n    <tr style='background: rgba(0,0,0,0.05); text-align: left;'>\n      <th style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Invalid Name</th>\n      <th style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Reason</th>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack); font-family: monospace; color: var(--red);'>777abc</td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Variable names must start with a <strong>letter</strong>, not a number.</td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack); font-family: monospace; color: var(--red);'>santana-wg</td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Special characters like hyphens (-) are not allowed. Only letters, numbers, and underscores (_) are valid.</td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack); font-family: monospace; color: var(--red);'>REAL</td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>You cannot use language keywords (like REAL, INTEGER) as variable names.</td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack); font-family: monospace; color: var(--red);'>program</td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>This is a reserved keyword used to start a script.</td>\n    </tr>\n  </table>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 6",
+    "topic": [
+      "Fortran Programming",
+      "Operators"
+    ],
+    "Question": {
+      "content": "What are the different types of Fortran operators?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Arithmetic, Relational, Logical, Assignment, and Bitwise operators."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Fortran Operator Categories</h4>\n  \n  <ul style='list-style-type: none; padding: 0;'>\n    <li style='margin-bottom: 8px;'>\n      <strong style='color: var(--strongColor);'>➕ Arithmetic Operators:</strong><br>\n      Used for math (e.g., `+`, `-`, `*`, `/`, `**` for exponentiation).\n    </li>\n    <li style='margin-bottom: 8px;'>\n      <strong style='color: var(--strongColor);'>⚖️ Relational Operators:</strong><br>\n      Used to compare values (e.g., `==`, `/=`, `<`, `>`).\n    </li>\n    <li style='margin-bottom: 8px;'>\n      <strong style='color: var(--strongColor);'>🧠 Logical Operators:</strong><br>\n      Used for true/false logic (e.g., `.AND.`, `.OR.`, `.NOT.`).\n    </li>\n    <li style='margin-bottom: 8px;'>\n      <strong style='color: var(--strongColor);'>📝 Assignment Operators:</strong><br>\n      Used to assign values to variables (e.g., `=`).\n    </li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 7a",
+    "topic": [
+      "Fortran Programming",
+      "Mathematical Translation"
+    ],
+    "Question": {
+      "content": "Translate the mathematical expression into a Fortran expression: \\( W = \\frac{3x - 7}{a + \\log_{10}(\\frac{x}{y} + b)} \\)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "W = (3 * x - 7) / (a + LOG10(x / y + b))"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Step-by-Step Translation</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Numerator (Top part):</strong><br>\n    Math: \\(3x - 7\\)<br>\n    Fortran: `3 * x - 7`<br>\n    <em style='color: var(--red);'>Crucial:</em> Enclose this in parentheses `(3 * x - 7)` so the division applies to the whole group.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Denominator (Bottom part):</strong><br>\n    Math: \\(a + \\log_{10}(\\dots)\\)<br>\n    Fortran: `a + LOG10(...)`<br>\n    Note: Fortran uses `LOG10` for base-10 logarithms.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>3. Inside the Log:</strong><br>\n    Math: \\(\\frac{x}{y} + b\\)<br>\n    Fortran: `x / y + b`\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 12px; border-radius: 6px; border-left: 4px solid var(--cAns); margin-top: 15px;'>\n    <strong>✓ Final Code:</strong><br>\n    <code style='color: var(--black);'>W = (3 * x - 7) / (a + LOG10(x / y + b))</code>\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 7b",
+    "topic": [
+      "Fortran Programming",
+      "Mathematical Translation"
+    ],
+    "Question": {
+      "content": "Translate the mathematical expression into a Fortran expression: \\( X = \\frac{-b + \\cos(b - 5ac)}{\\sqrt{r^2 + (3ab - \\frac{1}{2}cr)^3}} \\)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "X = (-b + COS(b - 5*a*c)) / SQRT(r**2 + (3*a*b - 0.5*c*r)**3)"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Step-by-Step Translation</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Numerator:</strong><br>\n    Math: \\(-b + \\cos(b - 5ac)\\)<br>\n    Fortran: `(-b + COS(b - 5*a*c))`<br>\n    Note: Multiplication must be explicit (`5*a*c`, not `5ac`).\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Denominator:</strong><br>\n    Math: Square root of a complex term.<br>\n    Fortran: `SQRT(...)`\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>3. Inside the Square Root:</strong><br>\n    Math: \\(r^2 + (3ab - \\frac{1}{2}cr)^3\\)<br>\n    Fortran: `r**2 + (3*a*b - 0.5*c*r)**3`<br>\n    Notes:<br>\n    - Exponents use `**` (e.g., `r**2`).<br>\n    - Fractions like \\(1/2\\) should be written as `0.5` to ensure floating-point accuracy.\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 12px; border-radius: 6px; border-left: 4px solid var(--cAns); margin-top: 15px;'>\n    <strong>✓ Final Code:</strong><br>\n    <code style='color: var(--black);'>X = (-b + COS(b - 5*a*c)) / SQRT(r**2 + (3*a*b - 0.5*c*r)**3)</code>\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 8a",
+    "topic": [
+      "Fortran Programming",
+      "Data Types",
+      "Arithmetic Expressions"
+    ],
+    "Question": {
+      "content": "Given values a = 6.2, b = 5, c = 2.5, and d = 10, determine the outcome and data type of the expression: \\( Y = 2a - c \\)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Value: 9.9, Data Type: Real"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Evaluation Step-by-Step</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Substitute Values:</strong><br>\n    \\( Y = 2 \\times 6.2 - 2.5 \\)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Perform Multiplication:</strong><br>\n    \\( 2 \\times 6.2 = 12.4 \\) (This is a Real number)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>3. Perform Subtraction:</strong><br>\n    \\( 12.4 - 2.5 = 9.9 \\)\n  </div>\n\n  <div style='background: var(--infoBg); color: var(--infoCl); padding: 10px; border-radius: 6px;'>\n    <strong>Data Type Rule:</strong> Since the variables <em>a</em> and <em>c</em> are Real numbers (contain decimals), the result is automatically <strong>Real</strong>.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 8b",
+    "topic": [
+      "Fortran Programming",
+      "Data Types",
+      "Arithmetic Expressions"
+    ],
+    "Question": {
+      "content": "Given values a = 6.2, b = 5, c = 2.5, and d = 10, determine the outcome and data type of the expression: \\( M = c + 10 \\)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Value: 12.5, Data Type: Real"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Mixed-Mode Arithmetic</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Identify Types:</strong><br>\n    Variable <em>c</em> (2.5) is <strong>Real</strong>.<br>\n    Number 10 is <strong>Integer</strong>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Implicit Conversion:</strong><br>\n    When adding a Real and an Integer, Fortran converts the Integer to Real before calculating.<br>\n    \\( 2.5 + 10.0 = 12.5 \\)\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 10px; border-radius: 6px;'>\n    <strong>Result:</strong> 12.5 (Real)\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 8c",
+    "topic": [
+      "Fortran Programming",
+      "Data Types",
+      "Arithmetic Expressions"
+    ],
+    "Question": {
+      "content": "Given values a = 6.2, b = 5, c = 2.5, and d = 10, determine the outcome and data type of the expression: \\( Z = ac \\)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Value: 15.5, Data Type: Real"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Multiplication Evaluation</h4>\n  \n  <p>Calculation:</p>\n  <div style='background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace;'>\n    Z = 6.2 * 2.5<br>\n    Z = 15.5\n  </div>\n  \n  <p>Since both operands are Real numbers, the result <strong>Z</strong> is stored as a Real number.</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 8d",
+    "topic": [
+      "Fortran Programming",
+      "Data Types",
+      "Arithmetic Expressions"
+    ],
+    "Question": {
+      "content": "Given values a = 6.2, b = 5, c = 2.5, and d = 10, determine the outcome and data type of the expression: \\( X = da \\)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Value: 62.0, Data Type: Real"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Integer and Real Multiplication</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Calculation:</strong><br>\n    \\( X = 10 \\times 6.2 \\)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    Even though 'd' (10) is an Integer, it is multiplied by 'a' (6.2) which is Real. The integer is promoted to a real number for the calculation.\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 10px; border-radius: 6px;'>\n    <strong>Final Result:</strong> 62.0 (Real)\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 9",
+    "topic": [
+      "Fortran Programming",
+      "Syntax"
+    ],
+    "Question": {
+      "content": "When is `IMPLICIT NONE` used in Fortran?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "It is used as a compiler directive to enforce explicit variable declarations."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Understanding IMPLICIT NONE</h4>\n  \n  <p>By default, Fortran assumes variables starting with I-N are integers and others are real. This is risky and leads to bugs.</p>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>The Solution:</strong><br>\n    Adding <code>IMPLICIT NONE</code> at the start of your program forces you to manually declare the type (Integer, Real, etc.) of <strong>every</strong> variable you use. If you forget, the compiler will throw an error, helping you catch mistakes early.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 10",
+    "topic": [
+      "Fortran Programming",
+      "Arrays"
+    ],
+    "Question": {
+      "content": "What is the purpose of array statements in Fortran?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Array declarations are used to define arrays and their dimensions, while array manipulation statements are used to perform operations on them."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Arrays in Fortran</h4>\n  \n  <ul>\n    <li><strong>Declaration:</strong> Tells the computer to reserve a block of memory (e.g., `INTEGER :: Numbers(10)` creates a list of 10 integers).</li>\n    <li><strong>Manipulation:</strong> Involves assigning values, accessing specific items (elements), or doing math on the whole list at once.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 11",
+    "topic": [
+      "Fortran Programming",
+      "Arrays"
+    ],
+    "Question": {
+      "content": "What does the declaration statement `X(50)` do?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "It defines an array named X with 50 elements."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Array Declaration</h4>\n  \n  <p>The notation <code>X(50)</code> specifies that:</p>\n  <ol style='margin-left: 20px;'>\n    <li><strong>Name:</strong> The variable is called <strong>X</strong>.</li>\n    <li><strong>Dimension:</strong> It is not a single number, but a list (array) capable of holding <strong>50</strong> distinct values.</li>\n  </ol>\n  <div style='background: var(--infoBg); color: var(--infoCl); padding: 10px; border-radius: 6px; margin-top: 10px;'>\n    <em>Note:</em> The answer key provided notes this as \"REAL :: x50\", likely assuming the default type for variables starting with 'X' is Real.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 12",
+    "topic": [
+      "Fortran Programming",
+      "Code Formatting"
+    ],
+    "Question": {
+      "content": "In the Fixed Format Fortran environment, what is column 6 used for?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "It is used for indicating continuation lines."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>The Continuation Character</h4>\n  \n  <p>In older Fortran code (Fixed Format):</p>\n  <ul>\n    <li>Lines were limited in length.</li>\n    <li>If a single command was too long to fit on one line, you would place any character (like `*` or `+`) in <strong>Column 6</strong> of the <em>next</em> line.</li>\n    <li>This tells the compiler \"This line continues the command from the previous line.\"</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 13",
+    "topic": [
+      "Fortran Programming",
+      "Code Formatting"
+    ],
+    "Question": {
+      "content": "Which columns are used for the statement label?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Columns 1 to 5."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Statement Labels</h4>\n  \n  <p>The first 5 columns of a line are reserved for numbers (labels), like `100` or `30`. These labels act like addresses that other parts of the program (like GOTO or FORMAT statements) can refer to.</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 14",
+    "topic": [
+      "Fortran Programming",
+      "Code Formatting"
+    ],
+    "Question": {
+      "content": "Which columns are used for program statements and comments?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Columns 7-72 for program statements; Columns 73-80 for comments."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Column Layout Summary</h4>\n  \n  <table style='width: 100%; border-collapse: collapse;'>\n    <tr style='background: rgba(0,0,0,0.05);'>\n      <th style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Columns</th>\n      <th style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Usage</th>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>1 - 5</strong></td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Labels (Numbers)</td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>6</strong></td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Continuation character</td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>7 - 72</strong></td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>Actual Code/Statements</strong></td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>73 - 80</strong></td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Comments/Sequence Numbers (Ignored by compiler)</td>\n    </tr>\n  </table>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 15i",
+    "topic": [
+      "Fortran Programming",
+      "Debugging"
+    ],
+    "Question": {
+      "content": "Find the errors in the following Fortran statements: <br> `READ (100,5) A,B` <br> `100 FORMAT (F66.2, 13)`",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "1. In the READ statement, there is a missing closing parenthesis after B. \n2. In the FORMAT statement, the width specifier `13` is invalid (it should be `I3` or similar)."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Debugging Code</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>READ Error:</strong><br>\n    The provided solution identifies a missing parenthesis after `B`.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>FORMAT Error:</strong><br>\n    Inside `FORMAT (F66.2, 13)`, the second part is just the number `13`. A format code must start with a letter (like I, F, A). It likely meant <strong>I3</strong> (Integer of length 3) or <strong>F13.2</strong>.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 15ii",
+    "topic": [
+      "Fortran Programming",
+      "Debugging"
+    ],
+    "Question": {
+      "content": "Find the errors in the following Fortran statements: <br> `WRITE (6,25) X,Y` <br> `FORMAT (2X, 2F5.1`",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "1. In the WRITE statement, there is a missing closing parenthesis after Y. \n2. The FORMAT statement is missing a closing parenthesis at the end."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Parenthesis Check</h4>\n  \n  <p>Fortran syntax relies heavily on balanced parentheses.</p>\n  <ul>\n    <li><strong>WRITE:</strong> The provided solution flags `X,Y`.</li>\n    <li><strong>FORMAT:</strong> The line `FORMAT (2X, 2F5.1` opens a bracket `(` but never closes it. It must end with `)`.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 15iii",
+    "topic": [
+      "Fortran Programming",
+      "Debugging"
+    ],
+    "Question": {
+      "content": "Find the errors in the following Fortran loop: <br> `DO 300, K = 1, 50, 2` <br> `300 (N.LT, 50) Go to 50` <br> `301`",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "1. Comma after loop variable 'K' should be removed. \n2. Condition should be `N.LT.50` instead of `(N.LT, 50)`. \n3. Missing colon after label 50 in Goto. \n4. The loop is missing an END or CONTINUE statement."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Loop and Logic Errors</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Syntax:</strong><br>\n    The loop condition `(N.LT, 50)` is invalid syntax. The standard logical comparison is <code>IF (N .LT. 50)</code>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Structure:</strong><br>\n    The loop starts with `DO 300`, meaning it should end at the line labeled `300`. However, line 300 here is just an IF statement jumping away. A DO loop normally ends with a <code>300 CONTINUE</code> statement to mark the bottom of the loop.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "heading",
+    "heading": "Section B"
+  },
+  
+  {
+    "type": "Question",
+    "name": "Question 1",
+    "topic": [
+      "MATLAB",
+      "Functions",
+      "Matrix Construction"
+    ],
+    "Question": {
+      "content": "Use the `repmat` function to create the array Z: $$ Z = \\begin{bmatrix} 2 & 2 & 2 & 2 & 2 & 2 \\\\ 3 & 3 & 3 & 3 & 3 & 3 \\\\ 4 & 4 & 4 & 4 & 4 & 4 \\\\ 7 & 7 & 7 & 7 & 7 & 7 \\\\ 6 & 6 & 6 & 6 & 6 & 6 \\end{bmatrix} $$ This array consists of the column vector [2; 3; 4; 7; 6] repeated 6 times horizontally.",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Z = repmat([2; 3; 4; 7; 6], 1, 6)"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Understanding Repmat</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Goal:</strong> Create a 5x6 matrix by repeating a 5x1 column vector.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Syntax:</strong> <code>B = repmat(A, M, N)</code>\n    <ul>\n      <li><strong>A:</strong> The source vector <code>[2; 3; 4; 7; 6]</code>.</li>\n      <li><strong>M (Rows):</strong> Repeat 1 time vertically.</li>\n      <li><strong>N (Cols):</strong> Repeat 6 times horizontally.</li>\n    </ul>\n  </div>\n  \n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 10px; border-radius: 6px;'>\n    <strong>Code:</strong> <code>Z = repmat([2; 3; 4; 7; 6], 1, 6)</code>\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 2",
+    "topic": [
+      "Computer Science Basics",
+      "Software Engineering"
+    ],
+    "Question": {
+      "content": "Irrespective of the programming language, a good program must satisfy all of the following properties except:",
+      "type": "OBJ",
+      "options": [
+        "Reliability, Robustness, Inexpensive, maintainability, efficiency, and performance",
+        "Reliability, Robustness, Usability, Popular, Efficiency, and Performance",
+        "Reliability, Humble, Usability, Maintainability, Efficiency, and Performance",
+        "Reliability, Robustness, Usability, Maintainability, Efficiency, and Performance"
+      ]
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Reliability, Robustness, Usability, Maintainability, Efficiency, and Performance"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Software Quality Attributes</h4>\n  \n  <p>In software engineering, standard quality attributes (often referred to as 'ilities') describe how well a program functions.</p>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Valid Properties:</strong>\n    <ul>\n      <li><strong>Robustness:</strong> Ability to handle errors.</li>\n      <li><strong>Maintainability:</strong> Ease of updating code.</li>\n      <li><strong>Reliability:</strong> Consistency in operation.</li>\n      <li><strong>Efficiency/Performance:</strong> Optimal resource usage.</li>\n    </ul>\n  </div>\n\n  <div style='background: var(--warningBg); padding: 10px; border-radius: 6px; margin-top: 10px;'>\n    <strong>Invalid Distractors:</strong> Terms like \"Inexpensive,\" \"Popular,\" and \"Humble\" are not technical properties of the code's quality.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 3",
+    "topic": [
+      "MATLAB",
+      "Programming"
+    ],
+    "Question": {
+      "content": "Using the function \\( y = 3x^4 + 5x^3 + \\sin(x) \\), write a MATLAB program to find the solution. (Note: The specific range is cut off in the image, so a general solution is provided).",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "x = 1:10; % Example range\ny = 3*x.^4 + 5*x.^3 + sin(x);"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Writing Mathematical Formulas in MATLAB</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Define Input (x):</strong><br>\n    You need a range of values for x. For example, <code>x = 1:10;</code> creates values from 1 to 10.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Define Equation (y):</strong><br>\n    Translate \\( 3x^4 + 5x^3 + \\sin(x) \\) to code.<br>\n    <em>Crucial:</em> Use the dot operator (<code>.^</code>) for exponents when x is a vector (array). This tells MATLAB to square each number in the list individually.\n  </div>\n  \n  <div style='background: #282c34; color: #abb2bf; padding: 10px; border-radius: 4px; font-family: monospace; margin: 5px 0;'>\n    y = 3*x.^4 + 5*x.^3 + sin(x)\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 4",
+    "topic": [
+      "MATLAB",
+      "Matrix Construction"
+    ],
+    "Question": {
+      "content": "Find a short MATLAB expression to build the matrix B: <br> Row 1: 1 2 3 4 5 6 7 <br> Row 2: 9 7 5 3 1 -1 -8 <br> Row 3: 4 8 16 32 64 128 256",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "B = [1:7; 9:-2:-3; 2.^(2:8)]"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Analyzing the Rows</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Row 1:</strong> <code>1, 2, 3...7</code><br>\n    Code: <code>1:7</code>\n  </div>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Row 2:</strong> <code>9, 7, 5...</code><br>\n    This decreases by 2 each time. The mathematical sequence ends at -3. The image shows -8, which is likely a typo in the question paper, as -3 completes the arithmetic progression.<br>\n    Code: <code>9:-2:-3</code>\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Row 3:</strong> <code>4, 8, 16...</code><br>\n    These are powers of 2 (\\(2^2, 2^3...\\)).<br>\n    Code: <code>2.^(2:8)</code>\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 5",
+    "topic": [
+      "MATLAB",
+      "General Knowledge"
+    ],
+    "Question": {
+      "content": "MATLAB is used in the following range of applications except:",
+      "type": "OBJ",
+      "options": [
+        "Image and video processing",
+        "Control Systems and Computational Biology",
+        "Syntax Migration and Computational Chopping",
+        "Test, measurement and Computational Finance"
+      ]
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Syntax Migration and Computational Chopping"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Real vs. Fake Applications</h4>\n  \n  <p>MATLAB is a powerful tool used in engineering and science.</p>\n  <ul>\n    <li><strong>Real Uses:</strong> Finance, Biology, Image Processing, Control Systems.</li>\n    <li><strong>Fake Use:</strong> \"Computational Chopping\" is a made-up term that has no meaning in computer science.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 6",
+    "topic": [
+      "MATLAB",
+      "Commands"
+    ],
+    "Question": {
+      "content": "Which MATLAB command displays more than just the variable names (e.g., size, bytes, class)?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "whos"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Workspace Commands</h4>\n  \n  <table style='width: 100%; border-collapse: collapse;'>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>who</strong></td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Lists only names (e.g., A, B, x).</td>\n    </tr>\n    <tr>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'><strong>whos</strong></td>\n      <td style='padding: 8px; border-bottom: 1px solid var(--transparentBlack);'>Detailed view: Name, Size (3x3), Bytes, Class (double).</td>\n    </tr>\n  </table>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 7",
+    "topic": [
+      "MATLAB",
+      "Code Evaluation"
+    ],
+    "Question": {
+      "content": "Compiling and executing the following MATLAB code produces c = ___ and d = ___ <br> Code: <br> a = 5; b = 7 <br> c = a + b <br> d = c + sin(b) <br> e = 5 * d <br> f = exp(-d)",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "c = 12; d = 12.657"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Step-by-Step Execution</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 1: Calculate c</strong><br>\n    \\( c = 5 + 7 = 12 \\)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 2: Calculate d</strong><br>\n    \\( d = 12 + \\sin(7) \\)<br>\n    <em>Note:</em> MATLAB calculates sine in radians. \\(\\sin(7) \\approx 0.65698\\).<br>\n    \\( d = 12 + 0.657 = 12.657 \\)\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 8",
+    "topic": [
+      "MATLAB",
+      "Indexing"
+    ],
+    "Question": {
+      "content": "Referencing the element `rv(3:7)` created from the 9-element row vector `rv = [1,2,3,4,5,6,7,8,9]` will produce a new vector containing which elements?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "[3, 4, 5, 6, 7]"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Vector Slicing</h4>\n  \n  <p>The syntax <code>vector(start:end)</code> grabs specific items.</p>\n  <ul>\n    <li>The 3rd item is 3.</li>\n    <li>The 7th item is 7.</li>\n    <li>So <code>rv(3:7)</code> returns everything between and including them: <strong>3, 4, 5, 6, 7</strong>.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 9",
+    "topic": [
+      "MATLAB",
+      "Matrix Slicing"
+    ],
+    "Question": {
+      "content": "We obtain the result matrix \\( a_{new} \\) (3 rows, 5 columns) from the matrix \\( a \\) (4 rows, 5 columns) by applying which operation?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "a = a(1:3, :)"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Matrix Slicing</h4>\n  \n  <p>The resulting matrix is identical to the original but is missing the bottom row (Row 4).</p>\n  <div style='background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace;'>\n    a(1:3, :)\n  </div>\n  <p>This command means \"Take rows 1 through 3, and take all columns (:)\".</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 10",
+    "topic": [
+      "MATLAB",
+      "Matrix Operations"
+    ],
+    "Question": {
+      "content": "We obtain the result \\( d = \\begin{bmatrix} -6 & -3 & -3 \\\\ 2 & 5 & -2 \\\\ 2 & 1 & 8 \\end{bmatrix} \\) from matrices \\( a \\) and \\( b \\) by executing which operation?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "d = a - b"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Checking the Operation</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Given:</strong><br>\n    Matrix A starts with 1. Matrix B starts with 7.<br>\n    Result D starts with -6.\n  </div>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Calculation:</strong><br>\n    \\( 1 - 7 = -6 \\)<br>\n    Checking another element (Row 2, Col 2): \\( 5 - 0 = 5 \\).<br>\n    Since all elements match subtraction, the operation is <strong>a - b</strong>.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "heading",
+    "heading": "Section C"
+  },
+  {
+    "type": "Question",
+    "name": "Question 1",
+    "topic": ["Python", "Operating Systems"],
+    "Question": {
+      "content": "What do you call a command-line interpreter which lets you interact with your OS and execute Python commands and scripts?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "The Shell (or Python Interactive Shell / REPL)"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>The Python Shell</h4>\n  \n  <p>The tool that allows you to type Python commands and see immediate results, as well as interact with the Operating System, is often called the <strong>Shell</strong> or the <strong>REPL</strong> (Read-Eval-Print Loop).</p>\n  \n  <ul>\n    <li><strong>Read:</strong> Reads what you type.</li>\n    <li><strong>Eval:</strong> Executes (evaluates) the code.</li>\n    <li><strong>Print:</strong> Shows the result.</li>\n    <li><strong>Loop:</strong> Waits for the next command.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 2",
+    "topic": ["Python", "Definitions"],
+    "Question": {
+      "content": "What is the best definition of a script?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "A text file containing a sequence of instructions (code) to be executed by an interpreter."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>What is a Script?</h4>\n  \n  <p>In Python, a <strong>script</strong> is simply a file (usually ending in <code>.py</code>) that contains Python code meant to be run directly. Unlike a complex software application that might require compilation, a script is interpreted line-by-line to perform a specific task.</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 3",
+    "topic": ["Python", "Output"],
+    "Question": {
+      "content": "What is the expected behavior of the following program? <br><code>print(\"Goodbye!\")</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "It displays the text \"Goodbye!\" on the screen (console)."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>The Print Function</h4>\n  \n  <p>The <code>print()</code> function takes whatever is inside the parentheses and outputs it to the standard output device, which is usually your screen.</p>\n  <div style='background: #282c34; color: #abb2bf; padding: 10px; border-radius: 4px; font-family: monospace;'>\n    Input: print(\"Goodbye!\")<br>\n    Output: Goodbye!\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 4",
+    "topic": ["Computer Science Basics"],
+    "Question": {
+      "content": "What is machine code?",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Low-level binary instructions (0s and 1s) that can be executed directly by the computer's CPU."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Machine Code</h4>\n  \n  <p>Computers don't actually understand Python or English. They only understand <strong>Machine Code</strong>, which is the most fundamental language consisting entirely of binary digits (bits).</p>\n  <ul>\n    <li><strong>Source Code:</strong> Written by humans (e.g., Python).</li>\n    <li><strong>Interpreter/Compiler:</strong> Translates source code into machine code.</li>\n    <li><strong>Machine Code:</strong> Executed by the hardware.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 5",
+    "topic": ["Python", "Lists", "Indexing"],
+    "Question": {
+      "content": "What is the output of the following snippet? <br><code>my_list = [3, 1, -2]</code><br><code>print(my_list[my_list[-1]])</code> <br>*(Assuming the inner parentheses are a typo for brackets)*",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "1"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Nested Indexing Trace</h4>\n  \n  <p>This code uses the value from one index to determine another index.</p>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 1: Inner Index</strong><br>\n    <code>my_list[-1]</code> gets the last item in the list.<br>\n    The list is <code>[3, 1, -2]</code>.<br>\n    The last item is <strong>-2</strong>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 2: Outer Index</strong><br>\n    The code now becomes <code>my_list[-2]</code>.<br>\n    Index -1 is the last item (-2).<br>\n    Index -2 is the second-to-last item.<br>\n    The value at index -2 is <strong>1</strong>.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 6",
+    "topic": ["Python", "Lists", "Slicing"],
+    "Question": {
+      "content": "What is the output of the following snippet? <br><code>my_list = [1, 2, 3, 4]</code><br><code>print(my_list[-3:-2])</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "[2]"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Negative Slicing</h4>\n  \n  <p>Let's map the indices to the values:</p>\n  <table style='width: 100%; border-collapse: collapse; margin-bottom: 10px;'>\n    <tr>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>Value</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>1</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack); font-weight: bold; color: var(--strongColor);'>2</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>3</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>4</td>\n    </tr>\n    <tr>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>Neg Index</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>-4</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack); font-weight: bold; color: var(--strongColor);'>-3</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>-2</td>\n      <td style='border-bottom: 1px solid var(--transparentBlack);'>-1</td>\n    </tr>\n  </table>\n  \n  <ul>\n    <li><strong>Start (-3):</strong> Include the value at index -3 (which is 2).</li>\n    <li><strong>End (-2):</strong> Stop <em>before</em> index -2 (exclude 3).</li>\n    <li><strong>Result:</strong> A new list containing <code>[2]</code>.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 7",
+    "topic": ["Python", "Boolean Logic", "Operators"],
+    "Question": {
+      "content": "What value will be assigned to the X variable? <br><code>z = 10; y = 0</code> <br><code>X = y < z and z > y or y > z and z < y</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "True"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Boolean Logic Precedence</h4>\n  \n  <p>Python evaluates <code>and</code> before <code>or</code>.</p>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Evaluate Comparisons:</strong><br>\n    <code>y < z</code> (0 < 10) is <strong>True</strong>.<br>\n    <code>z > y</code> (10 > 0) is <strong>True</strong>.<br>\n    <code>y > z</code> (0 > 10) is <strong>False</strong>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Substitute:</strong><br>\n    <code>True and True or False and False</code>\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>3. Evaluate ANDs:</strong><br>\n    (True and True) is <strong>True</strong>.<br>\n    (False and False) is <strong>False</strong>.<br>\n    Equation becomes: <code>True or False</code>\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 10px; border-radius: 6px;'>\n    <strong>Final Result:</strong> True\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 8",
+    "topic": ["Python", "Bitwise Operators"],
+    "Question": {
+      "content": "What is the output of the following snippet? <br><code>a = 1; b = 0</code> <br><code>c = a & b</code> <br><code>d = a | b</code> <br><code>e = a ^ b</code> <br><code>print(c + d + e)</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "2"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Bitwise Operations</h4>\n  \n  <p>Binary: a=1 (01), b=0 (00)</p>\n  \n  <ul>\n    <li><strong>c = a & b (AND):</strong> Returns 1 only if both are 1. <br><code>1 & 0 = 0</code>.</li>\n    <li><strong>d = a | b (OR):</strong> Returns 1 if at least one is 1. <br><code>1 | 0 = 1</code>.</li>\n    <li><strong>e = a ^ b (XOR):</strong> Returns 1 if they are different. <br><code>1 ^ 0 = 1</code>.</li>\n  </ul>\n  \n  <div style='background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin-top: 10px;'>\n    <strong>Sum:</strong> c + d + e = 0 + 1 + 1 = <strong>2</strong>\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 9",
+    "topic": ["Python", "Random Module", "Loops"],
+    "Question": {
+      "content": "What is the expected output of the following code? <br><code>from random import randint</code><br><code>for i in range(2):</code><br><code>    print(randint(1,2), end=\"\")</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Any of: 11, 12, 21, or 22"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Random Number Generation</h4>\n  \n  <ul>\n    <li><code>randint(1, 2)</code> generates a random integer including both endpoints (either 1 or 2).</li>\n    <li>The loop runs 2 times.</li>\n    <li><code>end=\"\"</code> prevents moving to a new line after printing.</li>\n  </ul>\n  <p>Possible combinations are 11, 12, 21, or 22.</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 10",
+    "topic": ["Python", "Built-in Functions"],
+    "Question": {
+      "content": "A function which returns a list of all entities available in a module is called:",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "dir()"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>The dir() Function</h4>\n  \n  <p>The <code>dir()</code> function is a powerful built-in tool in Python. When used on a module (e.g., <code>dir(math)</code>), it returns a sorted list of strings containing the names of all functions, variables, and classes defined in that module.</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 11",
+    "topic": ["Python", "String Operations"],
+    "Question": {
+      "content": "What is the output of the following code? <br><code>print(3 * 'abc' + 'xyz')</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "abcabcabcxyz"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>String Arithmetic</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Multiplication (*):</strong><br>\n    Multiplying a string by an integer repeats it.<br>\n    <code>3 * 'abc'</code> becomes <code>'abcabcabc'</code>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Addition (+):</strong><br>\n    Adding strings concatenates (joins) them.<br>\n    <code>'abcabcabc' + 'xyz'</code> becomes <code>'abcabcabcxyz'</code>.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 12",
+    "topic": ["Python", "Math Module", "Booleans"],
+    "Question": {
+      "content": "What is the expected value of the result variable after the following code is executed? <br><code>import math</code> <br><code>result = math.e != math.pow(2,4)</code> <br><code>print(int(result))</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "1"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Code Evaluation</h4>\n  \n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>1. Values:</strong><br>\n    <code>math.e</code> is approximately <strong>2.718</strong>.<br>\n    <code>math.pow(2, 4)</code> is \\(2^4\\), which is <strong>16.0</strong>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>2. Comparison:</strong><br>\n    <code>2.718 != 16.0</code> (Is 2.718 NOT equal to 16?)<br>\n    This is <strong>True</strong>.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>3. Conversion:</strong><br>\n    <code>int(True)</code> converts the boolean True to the integer <strong>1</strong>.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 13",
+    "topic": ["Python", "Strings"],
+    "Question": {
+      "content": "Given: <br><code>S1 = \"Unique\"</code> <br><code>S2 = \"Port Harcourt\"</code> <br>Create a one-line Python program to output: \"UniqueUniport\"",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "print(\"UniqueUniport\")"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>String Manipulation</h4>\n  \n  <p>The simplest answer is to just print the string requested. If you needed to use the variables to derive \"Uniport\" from \"Port Harcourt\", you might use slicing like:</p>\n  <div style='background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace;'>\n    print(S1 + S2[4:8] + S2[0:4]) # Complicated\n  </div>\n  <p>However, simply printing the target string is the most robust one-line solution.</p>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 14",
+    "topic": ["Python", "Variables", "Syntax"],
+    "Question": {
+      "content": "What is the output of the program? <br><code>x = 5; y = 2</code> <br><code>x = y * x + 1</code> <br><code>print(x)</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "11"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Step-by-Step Calculation</h4>\n  \n  <p>Assuming the code meant <code>x = y * x + 1</code> (fixing the typo in the image):</p>\n  <ol>\n    <li>Substitute values: <code>x = 2 * 5 + 1</code></li>\n    <li>Multiplication first: <code>10 + 1</code></li>\n    <li>Addition second: <code>11</code></li>\n  </ol>\n  <div style='background: var(--warningBg); padding: 10px; border-radius: 6px; margin-top: 10px;'>\n    <strong>Note:</strong> The image contains a typo <code>x* = y*X + 1</code>. This is invalid syntax in Python. We interpreted it as standard assignment to solve the math problem.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 15",
+    "topic": ["Python", "Numpy", "Debugging"],
+    "Question": {
+      "content": "Identify the errors in the following code: <br><code>import Numpy as np</code> <br><code>data = np.array([15, 12...])</code> <br><code>avg = np.mean(data)</code> <br><code>sd = np.std(Data)</code> <br><code>min = avg - sd</code> <br><code>max = avg + std</code>",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Errors include: 'Numpy' should be 'numpy', 'Data' should be 'data', 'std' is undefined (should be 'sd'), '&&' is invalid syntax, and '|...|' is invalid for absolute value."
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Bug Hunting</h4>\n  \n  <ul>\n    <li><strong>Case Sensitivity:</strong> <code>import Numpy</code> must be <code>import numpy</code> (lowercase). Similarly, <code>Data</code> must match the variable <code>data</code>.</li>\n    <li><strong>Undefined Variables:</strong> The variable <code>std</code> is used in the calculation, but the standard deviation was stored in variable <code>sd</code>.</li>\n    <li><strong>Syntax:</strong> The symbol <code>& &</code> is not valid Python (Python uses <code>and</code> or single <code>&</code>). Also, pipes <code>| |</code> cannot be used for math operations like absolute value; use <code>abs()</code>.</li>\n  </ul>\n</div>"
+    }
+  },
+  {
+    "type": "Question",
+    "name": "Question 16",
+    "topic": ["Python", "Libraries", "Data Science"],
+    "Question": {
+      "content": "Two libraries in Python used for Data Analysis and Scientific computations are:",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Pandas and NumPy (or SciPy)"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Key Python Libraries</h4>\n  \n  <ul>\n    <li><strong>NumPy:</strong> The fundamental package for scientific computing with Python, adding support for large, multi-dimensional arrays and matrices.</li>\n    <li><strong>Pandas:</strong> Offers data structures (like DataFrames) and operations for manipulating numerical tables and time series.</li>\n    <li><strong>SciPy:</strong> Used for scientific and technical computing.</li>\n  </ul>\n</div>"
     }
   }
 ]
