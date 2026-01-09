@@ -5,7 +5,7 @@
     "course_title": "Engineering Computer Programming",
     "code": "ENG 213.1",
     "session": "2022/2023",
-    "topics": ["Coordinate Geometry", "Circles", "Parabolas", "Ellipses", "Hyperbolas", "Graphs", "Linear Algebra", "Determinants", "Matrix Dimensions", "Adjoint Matrix", "Matrix Transpose", "Diagonal Matrices", "Matrix Multiplication", "Calculus", "Differentiation", "Matrices", "Bilinear Forms", "Eigenvalues", "Trace", "Integration", "Orthogonal Matrices", "Applications", "Eigenvectors"],
+    "topics": ["Fortran Programming", "Computer Science Basics", "Data Types", "Variables", "Syntax Rules", "Operators", "Mathematical Translation", "Arithmetic Expressions", "Syntax", "Arrays", "Code Formatting", "Debugging", "MATLAB", "Functions", "Matrix Construction", "Software Engineering", "Programming", "General Knowledge", "Commands", "Code Evaluation", "Indexing", "Matrix Slicing", "Matrix Operations", "Python", "Operating Systems", "Definitions", "Output", "Lists", "Slicing", "Boolean Logic", "Bitwise Operators", "Random Module", "Loops", "Built-in Functions", "String Operations", "Math Module", "Booleans", "Strings", "Numpy", "Libraries", "Data Science"],
     "time": "120"
   },
   {
