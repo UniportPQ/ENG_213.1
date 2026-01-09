@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[
+    {
+    "type": "pageInfo",
+    "kind": "onjective",
+    "course_title": "Engineering Basic Mechanics",
+    "code": "ENG 202.1",
+    "session": "2019/2020",
+    "topics": ["Coordinate Geometry", "Circles", "Parabolas", "Ellipses", "Hyperbolas", "Graphs", "Linear Algebra", "Determinants", "Matrix Dimensions", "Adjoint Matrix", "Matrix Transpose", "Diagonal Matrices", "Matrix Multiplication", "Calculus", "Differentiation", "Matrices", "Bilinear Forms", "Eigenvalues", "Trace", "Integration", "Orthogonal Matrices", "Applications", "Eigenvectors"],
+    "time": "120"
+  },
+  {
+    "type": "Instruction",
+    "content": "Answer all questions"
+  },
+  {
+    "type": "heading",
+    "heading": "Secttion A"
+  },
+
+  {
+    "type": "subjective",
+    "name": "Question 1a",
+    "topic": [
+      "Equilibrium of Forces",
+      "Statics"
+    ],
+    "Question": {
+      "content": "Determine the magnitude of the tension in each cable supporting the 8m boom AC acted upon by the 6kN force shown in the figure.",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "9.62 kN"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Calculating Cable Tension</h4>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 1: Understand the Goal</strong><br>\n    We need to find how tightly the cables (BE and BD) are pulling to keep the boom (AC) from falling down. The boom is being pushed down by a 6kN load at the tip.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 2: Get Coordinates & Dimensions</strong><br>\n    Imagine a 3D grid with the joint A at the center (0,0,0).\n    <ul>\n      <li><strong>Point B (Cable attachment):</strong> 4.6m along the boom. \( B = (4.6, 0, 0) \)</li>\n      <li><strong>Point E (Wall anchor):</strong> It's back at the wall (x=0), up 4.2m, and to the side 4.6m. \( E = (0, 4.2, 4.6) \)</li>\n      <li><strong>Point C (Load):</strong> Total length 8m. \( C = (8, 0, 0) \)</li>\n    </ul>\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 3: Calculate Cable Geometry</strong><br>\n    We need the length of the cable from B to E. We use the 3D distance formula:\n    <br>\n    \( \text{Length} = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2} \)\n    <br>\n    \( L = \sqrt{(0-4.6)^2 + (4.2-0)^2 + (4.6-0)^2} \)\n    \( L = \sqrt{21.16 + 17.64 + 21.16} = \sqrt{59.96} \approx 7.743\,m \)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 4: Use \"Moments\" (The See-Saw Effect)</strong>
+      
+      [Image of moment of force diagram] <
+      br > \n The joint A acts like the pivot of a see - saw.The 6 kN load tries to rotate the boom down(Clockwise).The cables pull it up(Counter - Clockwise).These must balance.\n < br > <br>\n    <strong>The Equation:</strong> \( \sum M_A = 0 \)\n    <br>\n    \( (\text{Upward Pull} \times \text{Distance to A}) = (\text{Downward Load} \times \text{Distance to A}) \)\n    <br><br>\n    <em>Note:</em> Only the vertical part of the tension pulls \"up\". The vertical ratio is height/length = \( 4.2 / 7.743 \).\n    Since there are <strong>two</strong> cables:\n    <br>\n    \( 2 \times (T \times \frac{4.2}{7.743}) \times 4.6m = 6kN \times 8m \)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 5: Solve for Tension (T)</strong><br>\n    <div style='background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin: 8px 0; text-align: center;'>\n      \( T \times 4.99 = 48 \)\n      <br>\n      \( T = \frac{48}{4.99} \approx 9.62\,kN \)\n    </div>\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 12px; border-radius: 6px; border-left: 4px solid var(--cAns); margin-top: 15px;'>\n    <strong>✓ Final Answer:</strong> The tension in each cable is 9.62 kN.\n  </div>\n</div>"
+    }
+  },
+  {
+    "type": "subjective",
+    "name": "Question 1b",
+    "topic": [
+      "Equilibrium of Forces",
+      "Statics"
+    ],
+    "Question": {
+      "content": "Determine the reactions at the ball-and-socket joint A for the boom system shown in the figure.",
+      "type": "subjective"
+    },
+    "Answer": {
+      "type": "string",
+      "content": "Ax = 11.43 kN, Ay = -4.43 kN, Az = 0 kN"
+    },
+    "Explanation": {
+      "type": "string",
+      "content": "<div style='color: var(--explainColor); background: var(--explainBg); padding: 15px; border-radius: 8px; border-left: 4px solid var(--strongColor);'>\n  <h4 style='color: var(--strongColor); margin-top: 0; margin-bottom: 15px;'>Calculating Reactions at Joint A</h4>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 1: Understand Reactions</strong><br>\n    Newton's Third Law says \"For every action, there is an equal and opposite reaction.\" The wall at point A pushes back against the boom to keep it from moving. We need to find the force of this push in the X, Y, and Z directions.\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 2: Sum of Forces in X (Horizontal)</strong><br>\n    The cables are pulling the boom <em>into</em> the wall (Negative X). The wall must push <em>out</em> (Positive X).\n    <br>\n    \( A_x + \text{Cable Forces}_x = 0 \)\n    <br>\n    \( A_x = 2 \times T \times (\frac{4.6}{7.743}) \)\n    <br>\n    \( A_x = 2 \times 9.62 \times 0.594 \approx 11.43\,kN \)\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 3: Sum of Forces in Y (Vertical)</strong><br>\n    We have the cables pulling UP, the Load pushing DOWN, and the Reaction \( A_y \).\n    <br>\n    \( A_y + \text{Cable Upward Force} - \text{Load} = 0 \)\n    <br>\n    We know the total cable upward force is \( 10.43\,kN \) (from the previous calculation).\n    <br>\n    \( A_y + 10.43 - 6 = 0 \)\n    <br>\n    \( A_y + 4.43 = 0 \implies A_y = -4.43\,kN \)\n    <br>\n    <em>(The negative sign means the reaction at A is actually pulling downwards to anchor the boom).</em>\n  </div>\n\n  <div style='margin-bottom: 12px;'>\n    <strong style='color: var(--strongColor);'>Step 4: Sum of Forces in Z (Side-to-Side)</strong><br>\n    Because the two cables are symmetrical (one pulls left, one pulls right with equal force), they cancel each other out sideways.\n    <br>\n    \( A_z = 0\,kN \)\n  </div>\n\n  <div style='background: var(--cAnsBg); color: var(--cAns); padding: 12px; border-radius: 6px; border-left: 4px solid var(--cAns); margin-top: 15px;'>\n    <strong>✓ Final Answer:</strong>\n    <ul>\n      <li>\( A_x = 11.43\,kN \)</li>\n      <li>\( A_y = -4.43\,kN \)</li>\n      <li>\( A_z = 0\,kN \)</li>\n    </ul>\n  </div>\n</div>"
+    }
+  }
+]
